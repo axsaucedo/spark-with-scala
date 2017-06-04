@@ -1,0 +1,28 @@
+!SESSION 2017-06-04 14:29:56.050 -----------------------------------------------
+eclipse.buildId=4.6.0-vfinal-2017-05-16T08:49:17Z-Typesafe
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/alejandrosaucedo/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/alejandrosaucedo/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-06-04 14:30:55.859
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.scala-ide.sdt.core 2 0 2017-06-04 14:45:04.849
+!MESSAGE Preference scala.compiler.sourceLevel was uninitialized for SparkScalaCourse, setting default to 2.12.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-06-04 14:45:04.854
+!MESSAGE Removing  from compiler arguments of SparkScalaCourse because of: requested Scala Installation change
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-06-04 14:45:04.855
+!MESSAGE Turning off project-specific settings for SparkScalaCourse because of Settings are all identical to workspace after Xsource removal.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-06-04 14:45:56.279
+!MESSAGE Turning on project-specific settings for SparkScalaCourse because of requested Scala Installation change from settings update
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-06-04 14:45:56.279
+!MESSAGE Removing  from compiler arguments of SparkScalaCourse because of: requested Scala Installation change from settings update
+
+!ENTRY org.scala-ide.sdt.core 1 0 2017-06-04 14:46:17.626
+!MESSAGE Adding  -Xsource:2.11 -Ymacro-expand:none to compiler arguments of SparkScalaCourse because of: requested Scala Installation change from settings update
