@@ -1,17 +1,3 @@
-# Scala/Spark Exercise
-
-## Dataset
-
-* We have a dataset that has columns:
-    - CustomerID
-    - Item ID
-    - Amount spent
-
-We need to add something that adds the amount spent per customer!
-
-## Solution
-
-``` scala
 package io.e_x.spark
 
 import org.apache.spark._
@@ -39,10 +25,11 @@ object CustomerSpend {
     
     val totalSpent = rdd.reduceByKey( (x,y) => x + y )
     
-    val results = totalSpent.collect() 
+    val totalByCustomer = totalSpent.sortBy(_._2)
     
-    results.sorted.foreach(println)    
+    val results = totalByCustomer.collect() 
+    
+    results.foreach(println)    
   }
   
 }
-```
