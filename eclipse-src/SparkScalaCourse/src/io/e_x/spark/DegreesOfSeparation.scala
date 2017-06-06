@@ -1,4 +1,4 @@
-package com.sundogsoftware.spark
+package io.e_x.spark
 
 import org.apache.spark._
 import org.apache.spark.SparkContext._
@@ -13,7 +13,7 @@ import scala.collection.mutable.ArrayBuffer
 object DegreesOfSeparation {
   
   // The characters we want to find the separation between.
-  val startCharacterID = 5306 //SpiderMan
+  val startCharacterID = 9 //Abcissa (who? x2)
   val targetCharacterID = 14 //ADAM 3,031 (who?)
   
   // We make our accumulator a "global" Option so we can reference it in a mapper later.
