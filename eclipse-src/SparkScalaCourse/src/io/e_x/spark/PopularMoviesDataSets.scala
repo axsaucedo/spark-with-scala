@@ -1,10 +1,17 @@
-# Using DataSets instead of RDDs
+package com.sundogsoftware.spark
 
-We are going to take the popular movies file but this time we're going to see how it would look like with dataset
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.sql._
+import org.apache.log4j._
+import scala.io.Source
+import java.nio.charset.CodingErrorAction
+import scala.io.Codec
+import org.apache.spark.sql.functions._
 
-The first part, we still don't change it. We have stuff that loads movies, etc, etc.
-
-``` scala
+/** Find the movies with the most ratings. */
+object PopularMoviesDataSets {
+  
   /** Load up a Map of movie IDs to movie names. */
   def loadMovieNames() : Map[Int, String] = {
     
@@ -26,22 +33,16 @@ The first part, we still don't change it. We have stuff that loads movies, etc, 
     
      return movieNames
   }
-```
-
-
-We also create a Movie type
-
-``` scala
-final case class Movie(movieID: Int)
-```
-
-All we care is about the movie ID
-
-## Code
-
-So now we creat ea spark session as always:
-
-``` scala
+ 
+  // Case class so we can get a column name for our movie ID
+  final case class Movie(movieID: Int)
+  
+  /** Our main function where the action happens */
+  def main(args: Array[String]) {
+   
+    // Set the log level to only print errors
+    Logger.getLogger("org").setLevel(Level.ERROR)
+    
     // Use new SparkSession interface in Spark 2.0
     val spark = SparkSession
       .builder
@@ -50,35 +51,28 @@ So now we creat ea spark session as always:
       .config("spark.sql.warehouse.dir", "file:///C:/temp") // Necessary to work around a Windows bug in Spark 2.0.0; omit if you're not on Windows.
       .getOrCreate()
     
-```
-
-Once we have the spark session object, we load the u.data and create Movie objects from it.
-
-``` scala
-val lines = spark.sparkContext.textFile("../ml-100k/u.data").map(x => Movie(x.split("\t")(1).toInt))
-```
-
-We have now put structure into the unstructured dataset. Each movie object contains a single column - the movie id
-
-Now we convert hte movie ID into the dataset of movie objects.
-
-Now we can do SQL-ish things....
-
-We had to jump some hoops where we had to map movie ids to number 1s, but here we can do it fast!
-
-``` scala
-val topMovieIDs = movieDS.groupBy("movieID")
-                            .count()
-                            .orderBy(desc("count"))
-                            .cache()
-```
-
-So now we can do all of this in a single more readable line!
-
-Finally we can just make it human readable
-
-``` scala
-// Grab the top 10
+    // Read in each rating line and extract the movie ID; construct an RDD of Movie objects.
+    val lines = spark.sparkContext.textFile("../ml-100k/u.data").map(x => Movie(x.split("\t")(1).toInt))
+    
+    // Convert to a DataSet
+    import spark.implicits._
+    val moviesDS = lines.toDS()
+    
+    // Some SQL-style magic to sort all movies by popularity in one line!
+    val topMovieIDs = moviesDS.groupBy("movieID").count().orderBy(desc("count")).cache()
+    
+    // Show the results at this point:
+    /*
+    |movieID|count|
+    +-------+-----+
+    |     50|  584|
+    |    258|  509|
+    |    100|  508|   
+    */
+    
+    topMovieIDs.show()
+    
+    // Grab the top 10
     val top10 = topMovieIDs.take(10)
     
     // Load up the movie ID -> name map
@@ -94,10 +88,7 @@ Finally we can just make it human readable
 
     // Stop the session
     spark.stop()
-```
-
-Do remember to stop the session when we're done!
-
-
-
+  }
+  
+}
 
