@@ -1,0 +1,1042 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7-2 - Linear regression with MLLib · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="7-3.html" />
+    
+    
+    <link rel="prev" href="7-1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Section 1
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../section-1/1-1.html">
+            
+                <a href="../section-1/1-1.html">
+            
+                    
+                    1-1 - Overview: Installation and Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../section-1/1-2.html">
+            
+                <a href="../section-1/1-2.html">
+            
+                    
+                    1-2 - Create histogram of movie ratings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Section 2
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../section-2/2-1.html">
+            
+                <a href="../section-2/2-1.html">
+            
+                    
+                    2-1 - Scala Basics Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../section-2/2-2.html">
+            
+                <a href="../section-2/2-2.html">
+            
+                    
+                    2-2 - Scala Basics Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../section-2/2-3.html">
+            
+                <a href="../section-2/2-3.html">
+            
+                    
+                    2-3 - Scala Basics Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../section-2/2-4.html">
+            
+                <a href="../section-2/2-4.html">
+            
+                    
+                    2-4 - Scala Basics Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../section-2/2-5.html">
+            
+                <a href="../section-2/2-5.html">
+            
+                    
+                    2-5 - Scala Basics Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Section 3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../section-3/3-1.html">
+            
+                <a href="../section-3/3-1.html">
+            
+                    
+                    3-1 - Spark Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../section-3/3-10.html">
+            
+                <a href="../section-3/3-10.html">
+            
+                    
+                    3-10 - Scala/Spark Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../section-3/3-2.html">
+            
+                <a href="../section-3/3-2.html">
+            
+                    
+                    3-2 - Introducing RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../section-3/3-3.html">
+            
+                <a href="../section-3/3-3.html">
+            
+                    
+                    3-3 - Ratings Histogram Walkthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../section-3/3-4.html">
+            
+                <a href="../section-3/3-4.html">
+            
+                    
+                    3-4 - Under the hood of Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../section-3/3-5.html">
+            
+                <a href="../section-3/3-5.html">
+            
+                    
+                    3-5 - Key value RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../section-3/3-6.html">
+            
+                <a href="../section-3/3-6.html">
+            
+                    
+                    3-6 - Filtering RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../section-3/3-7.html">
+            
+                <a href="../section-3/3-7.html">
+            
+                    
+                    3-7 - Mat vs FlatMap + FlatMap Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../section-3/3-8.html">
+            
+                <a href="../section-3/3-8.html">
+            
+                    
+                    3-8 - Improving FlatMap Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../section-3/3-9.html">
+            
+                <a href="../section-3/3-9.html">
+            
+                    
+                    3-9 - Sorting Words Results
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Section 4
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../section-4/4-1.html">
+            
+                <a href="../section-4/4-1.html">
+            
+                    
+                    4-1 - Finding most popular movie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../section-4/4-2.html">
+            
+                <a href="../section-4/4-2.html">
+            
+                    
+                    4-2 - Most popular Superhero
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../section-4/4-3.html">
+            
+                <a href="../section-4/4-3.html">
+            
+                    
+                    4-3 - Superhero Degrees of Separation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../section-4/4-4.html">
+            
+                <a href="../section-4/4-4.html">
+            
+                    
+                    4-4 - Hard way of BFS with accumulators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../section-4/4-5.html">
+            
+                <a href="../section-4/4-5.html">
+            
+                    
+                    4-5 - Degrees of Separation Spark Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../section-4/4-6.html">
+            
+                <a href="../section-4/4-6.html">
+            
+                    
+                    4-6 - Computing Movie Similarities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../section-4/4-7.html">
+            
+                <a href="../section-4/4-7.html">
+            
+                    
+                    4-7 - Improve Quality of Movie Simlarities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../section-4/4-8.html">
+            
+                <a href="../section-4/4-8.html">
+            
+                    
+                    4-8 - Running Spark on a cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Section 5
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../section-5/5-1.html">
+            
+                <a href="../section-5/5-1.html">
+            
+                    
+                    5-1 - Packaging with SBT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../section-5/5-2.html">
+            
+                <a href="../section-5/5-2.html">
+            
+                    
+                    5-2 - Elastic Map Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../section-5/5-3.html">
+            
+                <a href="../section-5/5-3.html">
+            
+                    
+                    5-3 - Using EMR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../section-5/5-4.html">
+            
+                <a href="../section-5/5-4.html">
+            
+                    
+                    5-4 - Partitioning: Optimizing for running on Clusters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../section-5/5-5.html">
+            
+                <a href="../section-5/5-5.html">
+            
+                    
+                    5-5 - Best Practices for running a cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../section-5/5-6.html">
+            
+                <a href="../section-5/5-6.html">
+            
+                    
+                    5-6 - Troubleshooting cluster jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Section 6
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../section-6/6-1.html">
+            
+                <a href="../section-6/6-1.html">
+            
+                    
+                    6-1 - SparkSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../section-6/6-2.html">
+            
+                <a href="../section-6/6-2.html">
+            
+                    
+                    6-2 - SparkSQL in Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../section-6/6-3.html">
+            
+                <a href="../section-6/6-3.html">
+            
+                    
+                    6-3 - Using DataFrames and DataSets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../section-6/6-4.html">
+            
+                <a href="../section-6/6-4.html">
+            
+                    
+                    6-4 - Using DataSets instead of RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Section 7
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="7-1.html">
+            
+                <a href="7-1.html">
+            
+                    
+                    7-1 - Introducing MLLib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="7-2.html">
+            
+                <a href="7-2.html">
+            
+                    
+                    7-2 - Linear regression with MLLib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="7-3.html">
+            
+                <a href="7-3.html">
+            
+                    
+                    7-3 - DataSets in MLLibs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Section 8
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../section-8/8-1.html">
+            
+                <a href="../section-8/8-1.html">
+            
+                    
+                    8-1 - Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../section-8/8-2.html">
+            
+                <a href="../section-8/8-2.html">
+            
+                    
+                    8-2 - Processing Tweets with Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../section-8/8-3.html">
+            
+                <a href="../section-8/8-3.html">
+            
+                    
+                    8-3 - Spark Structured Streaming (Way of future!)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Section 9
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../section-9/9-1.html">
+            
+                <a href="../section-9/9-1.html">
+            
+                    
+                    9-1 - GraphX, Pregel + Graph stuff
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7-2 - Linear regression with MLLib</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="linear-regression-with-mllib">Linear regression with MLLib</h1>
+<ul>
+<li>Fit a line to a data set of observations</li>
+<li>Use this line to predict unobserved values</li>
+<li>I don&apos;t know why they call it &quot;regression&quot;. It&apos;s really misleading. You can use it to predict points in the future, the past, whatever. In fact time usually has nothing to do with it.</li>
+</ul>
+<h2 id="how-does-linear-regression-work">how does linear regression work?</h2>
+<ul>
+<li>Usually using &quot;least squares&quot;</li>
+<li>Minimizes the squared-error between each point and a line</li>
+<li>Remember slope intercept eq. of a line is y=mx+b</li>
+<li>The slope is the correlation between the two variables, times the standard dev in Y, all divivded by the stdev in X</li>
+</ul>
+<h2 id="there-are-more-ways">There are more ways</h2>
+<ul>
+<li>Spark streaming uses a more complex technique called stochastic gradient descent</li>
+<li>Friendlier to multi-dimensional data as it looks for contours in higher dimensions</li>
+</ul>
+<h2 id="linear-regression-with-mllib">Linear regression with MLLib</h2>
+<ul>
+<li>Set up your model look like this:</li>
+</ul>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> algorithm = <span class="hljs-keyword">new</span> <span class="hljs-type">LinearRegressionWithSGD</span>()
+
+algorithm.optimizer
+    .setNumIterations(<span class="hljs-number">100</span>)
+    .setStepSize(<span class="hljs-number">1.0</span>)
+    .setUpdated(<span class="hljs-keyword">new</span> <span class="hljs-type">SquaredL2Updater</span>())
+    .setRegParam(<span class="hljs-number">0.01</span>)
+</code></pre>
+<ul>
+<li>You train the model and make predictions using labelledpoint objects </li>
+</ul>
+<h2 id="gotchas-with-sgd-linear-regression">Gotchas with SGD linear regression</h2>
+<ul>
+<li>SGD doesn&apos;t handle &quot;feature scaling&quot; well, It assumes your data is similar to a linear distribution</li>
+<li>So you need to scale your data down and back up again when you are done</li>
+<li>It also assumes that your y-intercept is 0, unless you call algorithm. setIntercept(true)</li>
+</ul>
+<h1 id="lets-try-it">Let&apos;s try it!</h1>
+<ul>
+<li>We&apos;ll fabricate data for average page speed and revenue generated from session data on an online store</li>
+<li>Can we predict revenue based on a page speed using a linear model</li>
+</ul>
+<h2 id="code">Code</h2>
+<p>There is a file called <code>regression.txt</code>. It has 2 columns, separated by commas. You can read it very simply. It has simulated page speeds. We had to normalize the data to fit in the normal distribution curve, and scale back up when done.</p>
+<p>We have to import a set of specifc ML classes that we need to use.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark._
+<span class="hljs-keyword">import</span> org.apache.spark.<span class="hljs-type">SparkContext</span>._
+<span class="hljs-keyword">import</span> org.apache.spark.sql._
+<span class="hljs-keyword">import</span> org.apache.log4j._
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.linalg.<span class="hljs-type">Vectors</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">LabeledPoint</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">LinearRegressionWithSGD</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.optimization.<span class="hljs-type">SquaredL2Updater</span>
+</code></pre>
+<p>With supervised techniques we are training an algoritm and applying to unknown data.</p>
+<p>We will use the same data for training and testing:</p>
+<pre><code class="lang-scala">  <span class="hljs-keyword">val</span> trainingLines = sc.textFile(<span class="hljs-string">&quot;../regression.txt&quot;</span>)
+
+    <span class="hljs-comment">// And another RDD containing our &quot;test&quot; data that we want to predict values for using our linear model.</span>
+    <span class="hljs-comment">// This will expect both the known label and the feature data. In the real world you won&apos;t know</span>
+    <span class="hljs-comment">// the &quot;correct&quot; value and would just input feature data.</span>
+    <span class="hljs-keyword">val</span> testingLines = sc.textFile(<span class="hljs-string">&quot;../regression.txt&quot;</span>)
+</code></pre>
+<p>Now we get an rdd of value points</p>
+<pre><code class="lang-scala">    <span class="hljs-comment">// Convert input data to LabeledPoints for MLLib</span>
+    <span class="hljs-keyword">val</span> trainingData = trainingLines.map(<span class="hljs-type">LabeledPoint</span>.parse).cache()
+    <span class="hljs-keyword">val</span> testData = testingLines.map(<span class="hljs-type">LabeledPoint</span>.parse)
+</code></pre>
+<p>Then set the parameters and run it</p>
+<pre><code class="lang-scala">
+    <span class="hljs-keyword">val</span> algorithm = <span class="hljs-keyword">new</span> <span class="hljs-type">LinearRegressionWithSGD</span>()
+    algorithm.optimizer
+      .setNumIterations(<span class="hljs-number">100</span>)
+      .setStepSize(<span class="hljs-number">1.0</span>)
+      .setUpdater(<span class="hljs-keyword">new</span> <span class="hljs-type">SquaredL2Updater</span>())
+      .setRegParam(<span class="hljs-number">0.01</span>)
+
+
+    <span class="hljs-keyword">val</span> model = algorithm.run(trainingData)
+</code></pre>
+<p>After we&apos;ve trained it, now we want to predict page speeds just and make predictions of amount spent and compare to the previous original one.</p>
+<pre><code class="lang-scala">
+    <span class="hljs-comment">// Predict values for our test feature data using our linear regression model</span>
+    <span class="hljs-keyword">val</span> predictions = model.predict(testData.map(_.features))
+
+    <span class="hljs-comment">// Zip in the &quot;real&quot; values so we can compare them</span>
+    <span class="hljs-keyword">val</span> predictionAndLabel = predictions.zip(testData.map(_.label))
+</code></pre>
+<p> Finally we just print it all out</p>
+<pre><code class="lang-scala">    <span class="hljs-comment">// Print out the predicted and actual values for each point</span>
+    <span class="hljs-keyword">for</span> (prediction &lt;- predictionAndLabel) {
+      println(prediction)
+    }
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="7-1.html" class="navigation navigation-prev " aria-label="Previous page: 7-1 - Introducing MLLib">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="7-3.html" class="navigation navigation-next " aria-label="Next page: 7-3 - DataSets in MLLibs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7-2 - Linear regression with MLLib","level":"1.8.2","depth":2,"next":{"title":"7-3 - DataSets in MLLibs","level":"1.8.3","depth":2,"path":"section-7/7-3.md","ref":"section-7/7-3.md","articles":[]},"previous":{"title":"7-1 - Introducing MLLib","level":"1.8.1","depth":2,"path":"section-7/7-1.md","ref":"section-7/7-1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-7/7-2.md","mtime":"2017-06-08T19:59:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-10T19:31:13.549Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
